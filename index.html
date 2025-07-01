@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>window.huggingface={variables:{"SPACE_CREATOR_USER_ID":"6831c786eed929b0717069cd"}};</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify AD4 Enabled Themes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#131c2b',
+                        secondary: '#ffffff',
+                        accent: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .loading-dots {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .loading-dots span {
+            width: 8px;
+            height: 8px;
+            margin: 0 2px;
+            background-color: currentColor;
+            border-radius: 50%;
+            display: inline-block;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .loading-dots span:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        .loading-dots span:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+        @keyframes bounce {
+            0%, 80%, 100% { 
+                transform: scale(0);
+            } 40% { 
+                transform: scale(1.0);
+            }
+        }
+        .theme-card {
+            transition: all 0.3s ease;
+        }
+        .theme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .modal {
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-primary text-secondary py-4 shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                    <i class="fas fa-lock text-white"></i>
+                </div>
+                <h1 class="text-xl font-bold">SecureShopify</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-accent transition">Home</a>
+                <a href="#themes" class="hover:text-accent transition">Themes</a>
+                <a href="#features" class="hover:text-accent transition">Features</a>
+                <a href="#testimonials" class="hover:text-accent transition">Testimonials</a>
+                <a href="#faq" class="hover:text-accent transition">FAQ</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-primary px-4">
+            <div class="py-4 space-y-3">
+                <a href="#" class="block hover:text-accent transition">Home</a>
+                <a href="#themes" class="block hover:text-accent transition">Themes</a>
+                <a href="#features" class="block hover:text-accent transition">Features</a>
+                <a href="#testimonials" class="block hover:text-accent transition">Testimonials</a>
+                <a href="#faq" class="block hover:text-accent transition">FAQ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">Secure Shopify AD4 Enabled Themes</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Protect your Shopify store with our premium themes featuring built-in security measures. Select a theme that ensures compliance and protection against vulnerabilities.</p>
+            <a href="#themes" class="bg-accent hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition inline-flex items-center">
+                Browse Themes <i class="fas fa-chevron-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Why Choose Our AD4 Themes?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our themes are designed with security as the top priority while maintaining excellent performance and aesthetics.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Advanced Security</h3>
+                    <p class="text-gray-600">Built-in protection against XSS, CSRF, SQL injection and other common vulnerabilities.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tachometer-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Optimized Performance</h3>
+                    <p class="text-gray-600">Lightweight code and optimized assets for faster loading times and better SEO.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Mobile Responsive</h3>
+                    <p class="text-gray-600">Perfectly responsive design that works flawlessly on all devices and screen sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Themes Section -->
+    <section id="themes" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">AD4 Enabled Themes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Select from our collection of secure Shopify themes</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- Recommended Themes -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-primary flex items-center">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i> Recommended Themes
+                    </h3>
+                    
+                    <!-- Motion Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <div class="flex items-center">
+                                    <h4 class="text-xl font-bold text-primary mr-3">Motion</h4>
+                                    <span class="bg-accent text-white text-xs font-bold px-2 py-1 rounded">
+                                        RECOMMENDED
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 mt-1">Modern theme with smooth animations and robust security</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$160</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="motion" value="Motion" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="motion" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="toggleFeatures('motion-features')" class="text-sm text-accent hover:underline flex items-center">
+                                View Security Features <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </button>
+                            <div id="motion-features" class="mt-2 hidden">
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> AD4 Security Protocol</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Encrypted Data Storage</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> XSS Protection</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> CSRF Tokens</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Regular Security Updates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Prestige Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <div class="flex items-center">
+                                    <h4 class="text-xl font-bold text-primary mr-3">Prestige</h4>
+                                    <span class="bg-accent text-white text-xs font-bold px-2 py-1 rounded">
+                                        RECOMMENDED
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 mt-1">Luxury theme with premium features and top-tier security</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$200</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="prestige" value="Prestige" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="prestige" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="toggleFeatures('prestige-features')" class="text-sm text-accent hover:underline flex items-center">
+                                View Security Features <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </button>
+                            <div id="prestige-features" class="mt-2 hidden">
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> AD4 Security Protocol</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Advanced Firewall</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> SQL Injection Protection</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Two-Factor Authentication</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Automated Backups</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Impact Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <div class="flex items-center">
+                                    <h4 class="text-xl font-bold text-primary mr-3">Impact</h4>
+                                    <span class="bg-accent text-white text-xs font-bold px-2 py-1 rounded">
+                                        RECOMMENDED
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 mt-1">High-conversion theme with enterprise-grade security</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$245</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="impact" value="Impact" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="impact" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="toggleFeatures('impact-features')" class="text-sm text-accent hover:underline flex items-center">
+                                View Security Features <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </button>
+                            <div id="impact-features" class="mt-2 hidden">
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> AD4 Security Protocol</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Real-time Monitoring</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> DDoS Protection</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> PCI Compliance</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Malware Scanning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Themes -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-primary">Other AD4 Enabled Themes</h3>
+                    
+                    <!-- Shine Pro Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <h4 class="text-xl font-bold text-primary">Shine Pro</h4>
+                                <p class="text-gray-600 mt-1">Elegant theme with clean design and solid security</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$121</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="shine-pro" value="Shine Pro" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="shine-pro" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Debutify Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <h4 class="text-xl font-bold text-primary">Debutify</h4>
+                                <p class="text-gray-600 mt-1">Popular theme with conversion-focused features</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$110</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="debutify" value="Debutify" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="debutify" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Empire Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <h4 class="text-xl font-bold text-primary">Empire</h4>
+                                <p class="text-gray-600 mt-1">Powerful theme for large product catalogs</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$210</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="empire" value="Empire" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="empire" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Foodly Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <h4 class="text-xl font-bold text-primary">Foodly</h4>
+                                <p class="text-gray-600 mt-1">Specialized theme for food and beverage stores</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$150</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="foodly" value="Foodly" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="foodly" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mogo Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <h4 class="text-xl font-bold text-primary">Mogo</h4>
+                                <p class="text-gray-600 mt-1">Minimalist theme with focus on content</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$132</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="mogo" value="Mogo" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="mogo" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decoratica Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <h4 class="text-xl font-bold text-primary">Decoratica</h4>
+                                <p class="text-gray-600 mt-1">Theme perfect for home decor and furniture stores</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$192</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="decoratica" value="Decoratica" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="decoratica" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Scale Up Theme -->
+                    <div class="theme-card bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="mb-4 md:mb-0">
+                                <h4 class="text-xl font-bold text-primary">Scale Up</h4>
+                                <p class="text-gray-600 mt-1">Theme designed for scaling businesses</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                                <span class="text-lg font-bold text-accent">$134</span>
+                                <div class="flex items-center">
+                                    <input type="radio" name="selected-theme" id="scale-up" value="Scale Up" class="mr-2" onclick="scrollToOptIn()">
+                                    <label for="scale-up" class="text-sm">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">What Our Customers Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from merchants who have secured their stores with our themes</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-primary">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-500">Fashion Store Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The security features in the Motion theme gave me peace of mind. My conversion rates improved by 30% after switching to this theme."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-primary">Michael Chen</h4>
+                            <p class="text-sm text-gray-500">Electronics Retailer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Prestige theme's built-in security stopped multiple hacking attempts. The support team is incredibly responsive and helpful."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-primary">David Wilson</h4>
+                            <p class="text-sm text-gray-500">Health & Wellness</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"After being hacked with my previous theme, I switched to Impact. The security features are comprehensive and the performance is excellent."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our AD4 enabled themes</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button onclick="toggleFAQ('faq1')" class="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <h3 class="font-medium text-primary text-left">What does AD4 security mean?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform" id="faq1-icon"></i>
+                    </button>
+                    <div id="faq1" class="hidden px-4 pb-4 pt-2 bg-white">
+                        <p class="text-gray-600">AD4 security refers to our advanced protection protocol that includes four layers of defense: Application security, Data protection, Detection systems, and Defense mechanisms. This comprehensive approach ensures your store is protected against the most common vulnerabilities and threats.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button onclick="toggleFAQ('faq2')" class="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <h3 class="font-medium text-primary text-left">How often are themes updated?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform" id="faq2-icon"></i>
+                    </button>
+                    <div id="faq2" class="hidden px-4 pb-4 pt-2 bg-white">
+                        <p class="text-gray-600">We release security updates monthly and feature updates quarterly. All updates are thoroughly tested before release to ensure compatibility and stability. You'll receive notifications when updates are available for your theme.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button onclick="toggleFAQ('faq3')" class="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <h3 class="font-medium text-primary text-left">Can I customize these themes?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform" id="faq3-icon"></i>
+                    </button>
+                    <div id="faq3" class="hidden px-4 pb-4 pt-2 bg-white">
+                        <p class="text-gray-600">Yes, all our themes are fully customizable through the Shopify theme editor. For advanced customizations, we offer documentation and support. The security features remain intact even with extensive customization.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button onclick="toggleFAQ('faq4')" class="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <h3 class="font-medium text-primary text-left">What happens if my store gets hacked?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform" id="faq4-icon"></i>
+                    </button>
+                    <div id="faq4" class="hidden px-4 pb-4 pt-2 bg-white">
+                        <p class="text-gray-600">While our themes significantly reduce the risk of hacking, if your store is compromised while using our theme, our support team will help you restore your store and identify the vulnerability at no additional cost (terms apply).</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button onclick="toggleFAQ('faq5')" class="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <h3 class="font-medium text-primary text-left">How does the theme delivery work?</h3>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform" id="faq5-icon"></i>
+                    </button>
+                    <div id="faq5" class="hidden px-4 pb-4 pt-2 bg-white">
+                        <p class="text-gray-600">After purchase, we'll send the theme files directly to your Shopify account using the Expert ID you provide. You'll receive installation instructions and our team is available to assist with setup if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opt-In Section -->
+    <section id="opt-in" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center mb-10">
+                <h2 class="text-3xl font-bold text-primary mb-4">Get Your Secure Theme</h2>
+                <p class="text-gray-600">Complete the form below to receive your selected AD4 enabled Shopify theme</p>
+            </div>
+            
+            <div class="max-w-md mx-auto">
+                <div id="selected-theme-display" class="bg-gray-50 p-4 rounded-lg mb-6 hidden">
+                    <p class="text-sm text-gray-600">You have selected:</p>
+                    <h4 id="selected-theme-name" class="font-bold text-primary"></h4>
+                </div>
+                
+                <button id="opt-in-btn" class="w-full bg-accent hover:bg-blue-700 text-white font-bold py-3 px-4 rounded transition flex items-center justify-center">
+                    <span id="btn-text">Opt In for Selected Theme</span>
+                    <span id="btn-loading" class="loading-dots hidden ml-2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Secure Your Shopify Store?</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8">Choose from our collection of AD4 enabled themes and protect your business today.</p>
+            <a href="#themes" class="bg-secondary hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full transition inline-flex items-center">
+                Browse Themes <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Modal Form -->
+    <div id="modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-primary">Theme Request Form</h3>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form id="theme-form" action="https://formspree.io/f/xeogbzwg" method="POST" class="space-y-4">
+                    <input type="hidden" id="form-theme-name" name="selected_theme">
+                    
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username *</label>
+                        <input type="text" id="username" name="username" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <input type="checkbox" id="upwork-check" name="upwork_check" class="h-4 w-4 text-accent focus:ring-accent border-gray-300 rounded">
+                        <label for="upwork-check" class="ml-2 block text-sm text-gray-700">This Gmail is registered with Upwork</label>
+                    </div>
+                    
+                    <div id="alt-email-container" class="hidden">
+                        <label for="alt-email" class="block text-sm font-medium text-gray-700 mb-1">Alternative Email *</label>
+                        <input type="email" id="alt-email" name="alternative_email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                        <p class="text-xs text-gray-500 mt-1">Due to platform policies, please provide an alternative email for theme delivery.</p>
+                    </div>
+                    
+                    <div>
+                        <label for="expert-id" class="block text-sm font-medium text-gray-700 mb-1">Expert ID *</label>
+                        <input type="text" id="expert-id" name="expert_id" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                        <p class="text-xs text-gray-500 mt-1">Required for theme delivery to your account.</p>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <input type="checkbox" id="free-redesign" name="free_redesign" class="h-4 w-4 text-accent focus:ring-accent border-gray-300 rounded">
+                        <label for="free-redesign" class="ml-2 block text-sm text-gray-700">I would like a free redesign with my theme</label>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-primary hover:bg-gray-900 text-white font-bold py-3 px-4 rounded transition flex items-center justify-center">
+                            <span id="submit-text">Submit Request</span>
+                            <span id="submit-loading" class="loading-dots hidden ml-2">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="success-message" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check text-green-500 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-2">Request Submitted!</h3>
+            <p class="text-gray-600 mb-4" id="success-text">Your theme request has been received. We'll send the selected theme to your provided Expert ID shortly.</p>
+            <button id="close-success" class="bg-accent hover:bg-blue-700 text-white font-medium py-2 px-6 rounded transition">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-2">
+                            <i class="fas fa-lock text-white"></i>
+                        </div>
+                        SecureShopify
+                    </h3>
+                    <p class="text-gray-300 text-sm">Providing secure Shopify themes with built-in AD4 security features for your online store.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition text-sm">Home</a></li>
+                        <li><a href="#themes" class="text-gray-300 hover:text-white transition text-sm">Themes</a></li>
+                        <li><a href="#features" class="text-gray-300 hover:text-white transition text-sm">Features</a></li>
+                        <li><a href="#faq" class="text-gray-300 hover:text-white transition text-sm">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition text-sm">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition text-sm">Security Guide</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition text-sm">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition text-sm">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-envelope mr-2"></i> support@secureshopify.com</li>
+                        <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-phone-alt mr-2"></i> +1 (555) 123-4567</li>
+                        <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-map-marker-alt mr-2"></i> 123 Security Ave, Safe City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300 text-sm">
+                <p>&copy; 2023 SecureShopify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Toggle theme features dropdown
+        function toggleFeatures(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+            
+            // Toggle chevron icon
+            const button = element.previousElementSibling;
+            const icon = button.querySelector('i');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        }
+        
+        // Toggle FAQ items
+        function toggleFAQ(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+            
+            // Toggle chevron icon
+            const icon = document.getElementById(id + '-icon');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        }
+        
+        // Scroll to opt-in section when theme is selected
+        function scrollToOptIn() {
+            const selectedTheme = document.querySelector('input[name="selected-theme"]:checked');
+            if (selectedTheme) {
+                // Update selected theme display
+                const themeDisplay = document.getElementById('selected-theme-display');
+                const themeName = document.getElementById('selected-theme-name');
+                const formThemeName = document.getElementById('form-theme-name');
+                
+                themeName.textContent = selectedTheme.value;
+                formThemeName.value = selectedTheme.value;
+                themeDisplay.classList.remove('hidden');
+                
+                // Scroll to opt-in section
+                document.getElementById('opt-in').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // Modal functionality
+        const modal = document.getElementById('modal');
+        const successModal = document.getElementById('success-message');
+        const optInBtn = document.getElementById('opt-in-btn');
+        const closeModal = document.getElementById('close-modal');
+        const closeSuccess = document.getElementById('close-success');
+        const form = document.getElementById('theme-form');
+        const upworkCheck = document.getElementById('upwork-check');
+        const altEmailContainer = document.getElementById('alt-email-container');
+        const altEmailInput = document.getElementById('alt-email');
+        
+        // Show modal when opt-in button is clicked
+        optInBtn.addEventListener('click', function() {
+            const selectedTheme = document.querySelector('input[name="selected-theme"]:checked');
+            if (!selectedTheme) {
+                alert('Please select a theme first');
+                return;
+            }
+            
+            // Show loading animation
+            const btnText = document.getElementById('btn-text');
+            const btnLoading = document.getElementById('btn-loading');
+            
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            
+            // Simulate loading for 2 seconds
+            setTimeout(() => {
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+                modal.classList.add('active');
+            }, 2000);
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
+        
+        // Close success message
+        closeSuccess.addEventListener('click', function() {
+            successModal.classList.remove('active');
+        });
+        
+        // Toggle alternative email field based on Upwork checkbox
+        upworkCheck.addEventListener('change', function() {
+            if (this.checked) {
+                altEmailContainer.classList.remove('hidden');
+                altEmailInput.required = true;
+            } else {
+                altEmailContainer.classList.add('hidden');
+                altEmailInput.required = false;
+            }
+        });
+        
+        // Form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading animation
+            const submitText = document.getElementById('submit-text');
+            const submitLoading = document.getElementById('submit-loading');
+            
+            submitText.classList.add('hidden');
+            submitLoading.classList.remove('hidden');
+            
+            // Simulate form submission for 3 seconds
+            setTimeout(() => {
+                submitText.classList.remove('hidden');
+                submitLoading.classList.add('hidden');
+                
+                // Hide form modal and show success message
+                modal.classList.remove('active');
+                
+                // Update success message with selected theme
+                const successText = document.getElementById('success-text');
+                const selectedTheme = document.querySelector('input[name="selected-theme"]:checked').value;
+                successText.textContent = `You've successfully opted in for ${selectedTheme}. The theme will be forwarded to your provided Expert ID shortly.`;
+                
+                successModal.classList.add('active');
+                
+                // Reset form
+                form.reset();
+                
+                // Submit the actual form to Formspree
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                }).catch(error => {
+                    console.error('There was a problem with the form submission:', error);
+                });
+            }, 3000);
+        });
+        
+        // Close modals when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+            if (e.target === successModal) {
+                successModal.classList.remove('active');
+            }
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=KOOMNAAN/ad4" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
